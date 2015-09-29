@@ -46,7 +46,7 @@ namespace UcluFrekans
 					
 					}
 
-
+			//kit clone denemesi 
 			Kit kitler = new Kit ();
 			foreach (Kit k in kits) {
 				tenKits.Add (k);

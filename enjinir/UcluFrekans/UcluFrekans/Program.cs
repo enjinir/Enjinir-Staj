@@ -20,6 +20,8 @@ namespace UcluFrekans
 			string[] words = System.IO.File.ReadAllLines (@"ilk 1200.txt");
 			kits = new List<Kit> ();
 			tenKits = new List<Kit>(kits.Count);
+			int sayi = 0;
+
 
 
 
@@ -42,12 +44,13 @@ namespace UcluFrekans
 						tempKit.Harfler [2] = letters [k];
 						tempKit.frekans = tempFrekans;
 						kits.Add (tempKit);
+						sayi++;
 
 					
 					}
 
 			//kit clone denemesi 
-			Kit kitler = new Kit ();
+
 			foreach (Kit k in kits) {
 				tenKits.Add (k);
 			}
@@ -62,6 +65,7 @@ namespace UcluFrekans
 		//kitleri ekrana yazdır
 			for (int i = 0; i < tenKits.Count; i++)
 				Console.WriteLine (tenKits[i].Harfler[0]+ "," + tenKits[i].Harfler[1]+ "," + tenKits[i].Harfler[2] +"'nin frekansı: "+tenKits[i].frekans);
+			Console.WriteLine ("Kontrol Edilen Üçlü Sayisi:"+ sayi);
 
 			Console.ReadKey ();
 			

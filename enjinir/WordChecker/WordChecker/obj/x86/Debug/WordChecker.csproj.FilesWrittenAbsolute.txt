@@ -1,0 +1,5 @@
+/Users/MELIHEFEOGLU/Projects/WordChecker/WordChecker/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/MELIHEFEOGLU/Projects/WordChecker/WordChecker/bin/Debug/WordChecker.exe.mdb
+/Users/MELIHEFEOGLU/Projects/WordChecker/WordChecker/bin/Debug/WordChecker.exe
+/Users/MELIHEFEOGLU/Projects/WordChecker/WordChecker/obj/x86/Debug/WordChecker.exe
+/Users/MELIHEFEOGLU/Projects/WordChecker/WordChecker/obj/x86/Debug/WordChecker.exe.mdb

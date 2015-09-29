@@ -1,0 +1,5 @@
+/Users/MELIHEFEOGLU/Projects/frekans/frekans/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/MELIHEFEOGLU/Projects/frekans/frekans/bin/Debug/frekans.exe.mdb
+/Users/MELIHEFEOGLU/Projects/frekans/frekans/bin/Debug/frekans.exe
+/Users/MELIHEFEOGLU/Projects/frekans/frekans/obj/x86/Debug/frekans.exe
+/Users/MELIHEFEOGLU/Projects/frekans/frekans/obj/x86/Debug/frekans.exe.mdb

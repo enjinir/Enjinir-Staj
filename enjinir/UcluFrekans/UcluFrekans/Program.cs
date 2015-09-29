@@ -10,7 +10,8 @@ namespace UcluFrekans
 	class MainClass
 	{
 		public static List<Kit> kits;
-		public static List<Kit[]> tenKits;
+		public static List<Kit> tenKits;
+
 		public static void Main (string[] args)
 		{
 			
@@ -18,7 +19,8 @@ namespace UcluFrekans
 
 			string[] words = System.IO.File.ReadAllLines (@"ilk 1200.txt");
 			kits = new List<Kit> ();
-			tenKits = new List<Kit[]> ();
+			tenKits = new List<Kit>(kits.Count);
+
 
 
 
@@ -45,11 +47,21 @@ namespace UcluFrekans
 					}
 
 
+			Kit kitler = new Kit ();
+			foreach (Kit k in kits) {
+				tenKits.Add (k);
+			}
+
+
+
+
+
+
 
 
 		//kitleri ekrana yazdır
-			for (int i = 0; i < kits.Count; i++)
-				Console.WriteLine (kits[i].Harfler[0]+ "," + kits[i].Harfler[1]+ "," + kits[i].Harfler[2] +"'nin frekansı: "+kits[i].frekans);
+			for (int i = 0; i < tenKits.Count; i++)
+				Console.WriteLine (tenKits[i].Harfler[0]+ "," + tenKits[i].Harfler[1]+ "," + tenKits[i].Harfler[2] +"'nin frekansı: "+tenKits[i].frekans);
 
 			Console.ReadKey ();
 			

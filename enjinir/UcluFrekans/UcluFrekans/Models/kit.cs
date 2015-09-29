@@ -10,6 +10,7 @@ namespace Application
 	{
 		public string[] Harfler { get; set; }
 		public int frekans { get; set; }
+		//github test
 
 	}
 }

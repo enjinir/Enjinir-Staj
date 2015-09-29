@@ -1,9 +1,9 @@
 ﻿<Properties StartupItem="UcluFrekans/UcluFrekans.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="UcluFrekans/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UcluFrekans/Models/kit.cs">
     <Files>
-      <File FileName="../../frekans2/Program.cs" Line="1" Column="1" />
       <File FileName="UcluFrekans/Program.cs" Line="1" Column="1" />
+      <File FileName="UcluFrekans/Models/kit.cs" Line="14" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -54,7 +54,7 @@ namespace UcluFrekans
                         tempKit.Harfler.Add(letters[j]);
                         tempKit.Harfler.Add(letters[k]);
                         tempKit.Used = false;
-                        tempKit.frekans = tempFrekans;
+                        tempKit.Frekans = tempFrekans;
                         kits.Add(tempKit);
                         sayi++;
 

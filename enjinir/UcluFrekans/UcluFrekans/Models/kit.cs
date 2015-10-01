@@ -9,7 +9,7 @@ namespace Application
     public class Kit
     {
 
-        public int frekans { get; set; }
+        public int Frekans { get; set; }
 
         public List<char> Harfler { get; set; }
         public bool Used { get; set; }
@@ -21,35 +21,35 @@ namespace Application
 
         public Kit(params char[] chars)
         {
-            frekans = 0;
+            Frekans = 0;
             Used = false;
             Harfler = chars.ToList();
         }
 
         public Kit(string chars)
         {
-            frekans = 0;
+            Frekans = 0;
             Used = false;
             Harfler = chars.ToCharArray().ToList();
         }
 
         public Kit(bool used, params char[] chars)
         {
-            frekans = 0;
+            Frekans = 0;
             Used = used;
             Harfler = chars.ToList();
         }
 
         public Kit(int fq, params char[] chars)
         {
-            frekans = fq;
+            Frekans = fq;
             Used = false;
             Harfler = chars.ToList();
         }
 
         public Kit(bool used, int fq, params char[] chars)
         {
-            frekans = fq;
+            Frekans = fq;
             Used = used;
             Harfler = chars.ToList();
         }

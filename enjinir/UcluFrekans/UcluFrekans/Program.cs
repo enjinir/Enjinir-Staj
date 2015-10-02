@@ -40,7 +40,7 @@ namespace UcluFrekans
 
 
 
-            string[] words = System.IO.File.ReadAllLines(@"ilk 1200.txt");
+            string[] words = System.IO.File.ReadAllLines(@"ilk 1000.txt");
             kits = new List<Kit>();
             tenKits = new List<Kit>(kits.Count);
             ulong sayi = 0;

@@ -10,7 +10,7 @@ namespace WordChecker
 	{
 		public static void Main (string[] args)
 		{
-			string path = @"ilk 1200.txt";
+			string path = @"ilk 1000.txt";
 			string word1;
 			List<string> words = new List<string> ();
 			System.IO.StreamReader file = 

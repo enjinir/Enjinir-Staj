@@ -1,0 +1,5 @@
+F:\visualstudio\Enjinir-Staj\enjinir\WordChecker\WordChecker\obj\x86\Debug\WordChecker.exe
+F:\visualstudio\Enjinir-Staj\enjinir\WordChecker\WordChecker\bin\Debug\WordChecker.exe
+F:\visualstudio\Enjinir-Staj\enjinir\WordChecker\WordChecker\bin\Debug\WordChecker.pdb
+F:\visualstudio\Enjinir-Staj\enjinir\WordChecker\WordChecker\obj\x86\Debug\WordChecker.csprojResolveAssemblyReference.cache
+F:\visualstudio\Enjinir-Staj\enjinir\WordChecker\WordChecker\obj\x86\Debug\WordChecker.pdb

@@ -44,6 +44,7 @@ namespace WordChecker
 			string manWord="oynamak";
 			string row2 = string.Format ("Kelime : {0} Uygunluk Normal : {1} Uygunluk Whell : {2}", manWord, checkWord (manWord) ? "OK" : "NOPE", wheelOfFortune(manWord) ? "OK" : "NOPE");
 			Console.WriteLine (row2);
+            Console.ReadKey();
 
 		}
 
@@ -74,12 +75,11 @@ namespace WordChecker
 			kits.Add(new Kit { Characters = new List<char>(new char[] { 'e', 'f', 'o' }) });
 			kits.Add(new Kit { Characters = new List<char>(new char[] { 'm', 'v', 'G' }) });
 			kits.Add(new Kit { Characters = new List<char>(new char[] { 'r', 'z', 'p' }) });
-			kits.Add(new Kit { Characters = new List<char>(new char[] { 'l', 'C', 'g' }) });
-			kits.Add(new Kit { Characters = new List<char>(new char[] { 'i', 's', 'y' }) });
-			kits.Add(new Kit { Characters = new List<char>(new char[] { 't', 'd', 'b' }) });
-			kits.Add(new Kit { Characters = new List<char>(new char[] { 'n', 'S', 'j' }) });
-			kits.Add(new Kit { Characters = new List<char>(new char[] { 'I', 'u', 'k' }) });
-
+			kits.Add(new Kit { Characters = new List<char>(new char[] { 'b', 'g', 't' }) });
+			kits.Add(new Kit { Characters = new List<char>(new char[] { 'C', 'n', 'a' }) });
+			kits.Add(new Kit { Characters = new List<char>(new char[] { 'd', 'S', 's' }) });
+			kits.Add(new Kit { Characters = new List<char>(new char[] { 'I', 'i', 'u' }) });
+			kits.Add(new Kit { Characters = new List<char>(new char[] { 'j', 'l', 'y' }) });
 			for (int i = 0; i < word.Length; i++) 
 			{
 				char c = word [i];
@@ -123,16 +123,16 @@ namespace WordChecker
 			if (tempWord.Length > 10)
 				return false;
 			List<Kit> kits = new List<Kit>();
-			kits.Add(new Kit { Characters = new List<char>(new char[] { 'a', 'O', 'U' }) });
-			kits.Add(new Kit { Characters = new List<char>(new char[] { 'k', 'h', 'c' }) });
-			kits.Add(new Kit { Characters = new List<char>(new char[] { 'e', 'f', 'o' }) });
-			kits.Add(new Kit { Characters = new List<char>(new char[] { 'm', 'v', 'G' }) });
-			kits.Add(new Kit { Characters = new List<char>(new char[] { 'r', 'z', 'p' }) });
-			kits.Add(new Kit { Characters = new List<char>(new char[] { 'l', 'C', 'g' }) });
-			kits.Add(new Kit { Characters = new List<char>(new char[] { 'i', 's', 'y' }) });
-			kits.Add(new Kit { Characters = new List<char>(new char[] { 't', 'd', 'b' }) });
-			kits.Add(new Kit { Characters = new List<char>(new char[] { 'n', 'S', 'j' }) });
-			kits.Add(new Kit { Characters = new List<char>(new char[] { 'I', 'u', 'k' }) });
+            kits.Add(new Kit { Characters = new List<char>(new char[] { 'a', 'O', 'U' }) });
+            kits.Add(new Kit { Characters = new List<char>(new char[] { 'k', 'h', 'c' }) });
+            kits.Add(new Kit { Characters = new List<char>(new char[] { 'e', 'f', 'o' }) });
+            kits.Add(new Kit { Characters = new List<char>(new char[] { 'm', 'v', 'G' }) });
+            kits.Add(new Kit { Characters = new List<char>(new char[] { 'r', 'z', 'p' }) });
+            kits.Add(new Kit { Characters = new List<char>(new char[] { 'b', 'g', 't' }) });
+            kits.Add(new Kit { Characters = new List<char>(new char[] { 'C', 'n', 'a' }) });
+            kits.Add(new Kit { Characters = new List<char>(new char[] { 'd', 'S', 's' }) });
+            kits.Add(new Kit { Characters = new List<char>(new char[] { 'I', 'i', 'u' }) });
+            kits.Add(new Kit { Characters = new List<char>(new char[] { 'j', 'l', 'y' }) });
 
 			List<char> seen = new List<char> (); 
 

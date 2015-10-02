@@ -13,6 +13,7 @@ namespace UcluFrekans
     {
         public static List<Kit> kits;
         public static List<Kit> tenKits;
+        public static List<Kit> testKits;
         
 
         public static void Main(string[] args)
@@ -20,7 +21,16 @@ namespace UcluFrekans
             Stopwatch stopWatch = new Stopwatch();
             int best = 0;
             char[] letters = { 'b', 'C', 'd', 'g', 'I', 'i', 'j', 'l', 'n', 'S', 's', 't', 'u', 'y', '?' };
+            //ilk 1200 için en iyi kitler : bdt-Cjl-gsy-Iiu-nS?-aOU-khc-efo-mvG-rzp (424), 
+            //aynı kit ilk 1000 için (446) sonucunu veriyor. a'lı : ilk 1200 için (482), ilk 1000 için (513) sonucunu veriyor
+            //ilk 1000 için en iyi kitler : bgt-Cn?-dSs-Iiu-jly-aOU-khc-efo-mvG-rzp (475), 
+            //aynı kit ilk 1200 için (412) sonucunu veriyor. a'lı : ilk 1000 için (547), ilk 1200 için (497) sonucunu veriyor
 
+            Kit birinci = new Kit("bgt");
+            Kit ikinci = new Kit("Cna");
+            Kit ucuncu = new Kit("dSs");
+            Kit dorduncu = new Kit("Iiu");
+            Kit besinci = new Kit("jly");
             Kit altinci = new Kit("aOU");
             Kit yedinci = new Kit("khc");
             Kit sekizinci = new Kit("efo");
@@ -28,7 +38,8 @@ namespace UcluFrekans
             Kit onuncu = new Kit("rzp");
 
 
-            string[] words = System.IO.File.ReadAllLines(@"ilk 1000.txt");
+
+            string[] words = System.IO.File.ReadAllLines(@"ilk 1200.txt");
             kits = new List<Kit>();
             tenKits = new List<Kit>(kits.Count);
             ulong sayi = 0;
@@ -64,130 +75,132 @@ namespace UcluFrekans
             StreamWriter writer = new StreamWriter(fs);
             int ilkfor = 0;
 
-            try
-            {
+            #region BuyukDongu
+            //try
+            //{
 
-                List<string> wtfLines = new List<string>();
+            //    List<string> wtfLines = new List<string>();
 
-                int count3 = 0;
-                for (int i = 0; i < kits.Count; i++)
-                {
-                    ilkfor++;
-                    Console.WriteLine("ilk for: " + ilkfor);
-                    Kit birinci = kits[i];
+            //    int count3 = 0;
+            //    for (int i = 0; i < kits.Count; i++)
+            //    {
+            //        ilkfor++;
+            //        Console.WriteLine("ilk for: " + ilkfor);
+            //        Kit birinci = kits[i];
 
-                    List<Kit> tempKits = kits.GetRange(i, kits.Count - i);
-
-
-
-                    tempKits = new List<Kit>(deleteKits(tempKits, birinci));
-
-                    //tempKits = kits.Where(k => k.Harfler.Join(birinci.Harfler, h => h, m => m, (h, m) => new { Harf = h }).Count() < 1).ToList();
-                    for (int i1 = 0; i1 < tempKits.Count; i1++)
-                    {
-                        Console.WriteLine("ikinci: " + counter);
-                        Kit ikinci = tempKits[i1];
-                        List<Kit> tempKits1 = tempKits.GetRange(i1, tempKits.Count - i1);
-                        tempKits1 = new List<Kit>(deleteKits(tempKits1, ikinci));
-
-                        for (int i2 = 0; i2 < tempKits1.Count; i2++)
-                        {
-                            Kit ucuncu = tempKits1[i2];
-                            List<Kit> tempKits2 = tempKits1.GetRange(i2, tempKits1.Count - i2);
-                            tempKits2 = new List<Kit>(deleteKits(tempKits2, ucuncu));
-
-                            for (int i3 = 0; i3 < tempKits2.Count; i3++)
-                            {
-                                Kit dorduncu = tempKits2[i3];
-                                List<Kit> tempKits3 = tempKits2.GetRange(i3, tempKits2.Count - i3);
-                                tempKits3 = new List<Kit>(deleteKits(tempKits3, dorduncu));
-
-                                for (int i4 = 0; i4 < tempKits3.Count; i4++)
-                                {
-                                    Kit besinci = tempKits3[i4];
-                                    List<Kit> tempKits4 = tempKits3.GetRange(i4, tempKits3.Count - i4);
-                                    //tempKits4 = new List<Kit>(deleteKits(tempKits4,besinci));
+            //        List<Kit> tempKits = kits.GetRange(i, kits.Count - i);
 
 
 
-                                    List<Kit> set = new List<Kit>();
-                                    set.AddRange(new Kit[] {
-                                                        birinci,
-                                                        ikinci,
-                                                        ucuncu,
-                                                        dorduncu,
-                                                        besinci,
-                                                        altinci,
-                                                        yedinci,
-                                                        sekizinci,
-                                                        dokuzuncu,
-                                                        onuncu
-                                                    });
+            //        tempKits = new List<Kit>(deleteKits(tempKits, birinci));
 
 
+            //        for (int i1 = 0; i1 < tempKits.Count; i1++)
+            //        {
+            //            Console.WriteLine("ikinci: " + counter);
+            //            Kit ikinci = tempKits[i1];
+            //            List<Kit> tempKits1 = tempKits.GetRange(i1, tempKits.Count - i1);
+            //            tempKits1 = new List<Kit>(deleteKits(tempKits1, ikinci));
 
-                                    counter++;
+            //            for (int i2 = 0; i2 < tempKits1.Count; i2++)
+            //            {
+            //                Kit ucuncu = tempKits1[i2];
+            //                List<Kit> tempKits2 = tempKits1.GetRange(i2, tempKits1.Count - i2);
+            //                tempKits2 = new List<Kit>(deleteKits(tempKits2, ucuncu));
 
+            //                for (int i3 = 0; i3 < tempKits2.Count; i3++)
+            //                {
+            //                    Kit dorduncu = tempKits2[i3];
+            //                    List<Kit> tempKits3 = tempKits2.GetRange(i3, tempKits2.Count - i3);
+            //                    tempKits3 = new List<Kit>(deleteKits(tempKits3, dorduncu));
 
-                                    int curr = countOfWords(set, words);
-
-                                    if (curr > best)
-                                    {
-                                        List<Kit> besKit = set;
-                                        best = curr;
-                                        string line = String.Join("-", besKit.Select(s => String.Join("", s.Harfler.Select(h => h.ToString())))) + " (" + best + ")";
-                                        writer.WriteLine(line);
-                                        Console.WriteLine(line);
-                                    }
+            //                    for (int i4 = 0; i4 < tempKits3.Count; i4++)
+            //                    {
+            //                        Kit besinci = tempKits3[i4];
+            //                        List<Kit> tempKits4 = tempKits3.GetRange(i4, tempKits3.Count - i4);
 
 
 
 
+            //                        List<Kit> set = new List<Kit>();
+            //                        set.AddRange(new Kit[] {
+            //                                            birinci,
+            //                                            ikinci,
+            //                                            ucuncu,
+            //                                            dorduncu,
+            //                                            besinci,
+            //                                            altinci,
+            //                                            yedinci,
+            //                                            sekizinci,
+            //                                            dokuzuncu,
+            //                                            onuncu
+            //                                        });
 
-                                }
 
-                            }
-                            /*stopWatch.Stop();
-                            TimeSpan ts = stopWatch.Elapsed;
-                            string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
-                                ts.Hours, ts.Minutes, ts.Seconds,
-                                ts.Milliseconds / 10);
-                            Console.WriteLine("RunTime " + elapsedTime);*/
+
+            //                        counter++;
+
+
+            //                        int curr = countOfWords(set, words);
+
+            //                        if (curr > best)
+            //                        {
+            //                            List<Kit> besKit = set;
+            //                            best = curr;
+            //                            string line = String.Join("-", besKit.Select(s => String.Join("", s.Harfler.Select(h => h.ToString())))) + " (" + best + ")";
+            //                            writer.WriteLine(line);
+            //                            Console.WriteLine(line);
+            //                        }
 
 
 
 
 
+            //                    }
 
-                        }
-
-                    }
-
-                }
+            //                }
+            //                /*stopWatch.Stop();
+            //                TimeSpan ts = stopWatch.Elapsed;
+            //                string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
+            //                    ts.Hours, ts.Minutes, ts.Seconds,
+            //                    ts.Milliseconds / 10);
+            //                Console.WriteLine("RunTime " + elapsedTime);*/
 
 
 
 
 
 
-                Console.WriteLine("Toplam: " + counter);
-                Console.ReadLine();
+            //            }
 
-            }
-            catch (Exception e)
-            {
-                writer.WriteLine("Exception: " + e.Message);
-            }
-            finally
-            {
+            //        }
 
-                writer.Close();
-
-            }
+            //    }
 
 
 
-            //File.WriteAllLines("wtflines.txt", ??);
+
+
+
+            //    Console.WriteLine("Toplam: " + counter);
+            //    Console.ReadLine();
+
+            //}
+            //catch (Exception e)
+            //{
+            //    writer.WriteLine("Exception: " + e.Message);
+            //}
+            //finally
+            //{
+
+            //    writer.Close();
+
+            //} 
+            #endregion
+
+
+
+            
 
             #region Kitleri Ekrana Yazdır
             //kitleri ekrana yazdır
@@ -224,8 +237,20 @@ namespace UcluFrekans
             //File.WriteAllLines("setler.txt", lines); 
             #endregion
 
-            Console.ReadLine();
-
+            //Kitleri testKitse attık
+            testKits = new List<Kit>();
+            testKits.Add(birinci);
+            testKits.Add(ikinci);
+            testKits.Add(ucuncu);
+            testKits.Add(dorduncu);
+            testKits.Add(besinci);
+            testKits.Add(altinci);
+            testKits.Add(yedinci);
+            testKits.Add(sekizinci);
+            testKits.Add(dokuzuncu);
+            testKits.Add(onuncu);
+            Console.WriteLine("Toplam: " +countOfWords(testKits,words));
+            Console.ReadKey();
         }
 
         public static List<Kit> deleteKits(List<Kit> kitler, Kit kit)
@@ -238,7 +263,7 @@ namespace UcluFrekans
                     if (kit.Harfler.Contains(l))
                     {
                         if (Kits1.Contains(k))
-                        {
+                        { 
                             Kits1.Remove(k);
                         }
                         break;

@@ -18,12 +18,12 @@ namespace UcluFrekans
 
         public static void Main(string[] args)
         {
-            Stopwatch stopWatch = new Stopwatch();
+            //Stopwatch stopWatch = new Stopwatch();
             int best = 0;
             char[] letters = { 'b', 'C', 'd', 'g', 'I', 'i', 'j', 'l', 'n', 'S', 's', 't', 'u', 'y', '?' };
-            //ilk 1200 için en iyi kitler : bdt-Cjl-gsy-Iiu-nS?-aOU-khc-efo-mvG-rzp (424), 
+            //ilk 1200 için en iyi kitler : bdt-Cjl-gsy-Iiu-nS?-aOU-khc-efo-mvG-rzp (424) sonucunu veriyor, 
             //aynı kit ilk 1000 için (446) sonucunu veriyor. a'lı : ilk 1200 için (482), ilk 1000 için (513) sonucunu veriyor
-            //ilk 1000 için en iyi kitler : bgt-Cn?-dSs-Iiu-jly-aOU-khc-efo-mvG-rzp (475), 
+            //ilk 1000 için en iyi kitler : bgt-Cn?-dSs-Iiu-jly-aOU-khc-efo-mvG-rzp (475) sonucunu veriyor, 
             //aynı kit ilk 1200 için (412) sonucunu veriyor. a'lı : ilk 1000 için (547), ilk 1200 için (497) sonucunu veriyor
 
             Kit birinci = new Kit("bgt");
@@ -31,6 +31,7 @@ namespace UcluFrekans
             Kit ucuncu = new Kit("dSs");
             Kit dorduncu = new Kit("Iiu");
             Kit besinci = new Kit("jly");
+            //alttaki kitler sabit
             Kit altinci = new Kit("aOU");
             Kit yedinci = new Kit("khc");
             Kit sekizinci = new Kit("efo");
